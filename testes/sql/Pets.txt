@@ -10,3 +10,11 @@ TABLE cats
 
 
 Escreva uma consulta que selecione todos os nomes de animais distintos.
+
+SQL:
+
+SELECT DISTINCT animals.name FROM (
+    SELECT name FROM dogs
+    UNION ALL
+    SELECT name FROM cats
+) animals
